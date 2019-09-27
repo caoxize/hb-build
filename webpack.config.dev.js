@@ -7,6 +7,7 @@ const StylelintWebpackPlugin = require('stylelint-webpack-plugin');
 const { ENTRY, SOURCE_DIR, DEV_HOST, DEV_PORT } = require('./config');
 
 module.exports = {
+  mode: 'development',
   ENTRY,
   output: {
     filename: '[name]-stamp4hash.js',
