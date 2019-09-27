@@ -8,7 +8,7 @@ const { ENTRY, SOURCE_DIR, DEV_HOST, DEV_PORT } = require('./config');
 
 module.exports = {
   mode: 'development',
-  ENTRY,
+  entry: ENTRY,
   output: {
     filename: '[name]-stamp4hash.js',
     publicPath: 'http://' + DEV_HOST + ':' + DEV_PORT + '/static/js/',

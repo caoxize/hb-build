@@ -9,7 +9,7 @@ const { ENTRY, PROJECT_PATH, SOURCE_DIR, TARGET_DIR, PUBLIC_PATH } = require('./
 
 module.exports = {
   mode: 'production',
-  ENTRY,
+  entry: ENTRY,
   output: {
     filename: '[name]-[chunkhash:8].js',
     path: path.resolve(PROJECT_PATH, TARGET_DIR, 'rsrc/dist'),

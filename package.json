@@ -1,6 +1,6 @@
 {
   "name": "hb-build",
-  "version": "0.0.1-beta03",
+  "version": "0.0.1-beta04",
   "description": "hb build",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/caoxize/hb-build.git"
+    "url": "https://github.com/caoxize/hb-build.git"
   },
   "keywords": [
     "hb"
@@ -30,6 +30,7 @@
     "autoprefixer": "9.6.1",
     "babel-eslint": "10.0.2",
     "babel-loader": "8.0.6",
+    "core-js": "3.1.4",
     "css-loader": "3.0.0",
     "cssnano": "4.1.10",
     "eslint": "6.1.0",
