@@ -1,6 +1,6 @@
 {
   "name": "hb-build",
-  "version": "0.0.1-beta02",
+  "version": "0.0.1-beta03",
   "description": "hb build",
   "main": "index.js",
   "scripts": {
