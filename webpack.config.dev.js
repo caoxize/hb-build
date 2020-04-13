@@ -2,13 +2,15 @@
 
 const path = require('path');
 const webpack = require('webpack');
+const merge = require('webpack-merge');
 const StylelintWebpackPlugin = require('stylelint-webpack-plugin');
 
-const { ENTRY, SOURCE_DIR, DEV_HOST, DEV_PORT } = require('./config');
+const BASE_CONFIG = require('./webpack.config.base');
 
-module.exports = {
+const { DEV_HOST, DEV_PORT } = require('./config');
+
+module.exports = merge(BASE_CONFIG, {
   mode: 'development',
-  entry: ENTRY,
   output: {
     filename: '[name]-stamp4hash.js',
     publicPath: 'http://' + DEV_HOST + ':' + DEV_PORT + '/static/js/',
@@ -24,9 +26,9 @@ module.exports = {
             loader: 'eslint-loader',
             options: {
               emitError: true,
-            }
-          }
-        ]
+            },
+          },
+        ],
       },
       {
         test: /\.(js|jsx)$/,
@@ -42,10 +44,10 @@ module.exports = {
             loader: 'css-loader',
             options: {
               importLoaders: 1,
-            }
+            },
           },
           'postcss-loader',
-        ]
+        ],
       },
       {
         test: /\.(png|jpe?g|gif)$/,
@@ -55,24 +57,20 @@ module.exports = {
             loader: 'url-loader',
             options: {
               limit: 5120,
-            }
-          }
-        ]
-      }
-    ]
+            },
+          },
+        ],
+      },
+    ],
   },
   plugins: [
     new StylelintWebpackPlugin(),
     new webpack.HotModuleReplacementPlugin(),
   ],
-  resolve: {
-    modules: [path.resolve(__dirname, SOURCE_DIR, 'src'), 'node_modules'],
-    extensions: ['.js', '.jsx', '.css', '.scss'],
-  },
   devServer: {
     hot: true,
     host: DEV_HOST,
     port: DEV_PORT,
   },
   devtool: 'cheap-module-eval-source-map',
-};
+});

@@ -1,19 +1,19 @@
-const path = require('path')
-const fs = require('fs')
-const PROJECT_PATH = process.cwd()
+const path = require('path');
+const fs = require('fs');
+const PROJECT_PATH = process.cwd();
 
 const pkg = JSON.parse(
   fs.readFileSync(path.resolve(PROJECT_PATH, './package.json'), 'utf-8')
-)
+);
 const {
   name,
   ENTRY,
   DEV_HOST = '0.0.0.0',
   DEV_PORT = '3001',
-  SOURCE_DIR = 'rsrc',
+  SOURCE_DIR = 'rsrc/src',
   TARGET_DIR = 'src/main/webapp',
-  PUBLIC_PATH = `/${name.toLowerCase()}/rsrc/dist/`
-} = pkg
+  PUBLIC_PATH = `/${name.toLowerCase()}/rsrc/dist/`,
+} = pkg;
 
 module.exports = {
   NAME: name.toLowerCase(),
@@ -23,5 +23,5 @@ module.exports = {
   PROJECT_PATH,
   SOURCE_DIR,
   TARGET_DIR,
-  PUBLIC_PATH
-}
+  PUBLIC_PATH,
+};
