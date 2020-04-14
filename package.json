@@ -1,6 +1,6 @@
 {
   "name": "hb-build",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "hb build",
   "main": "config.js",
   "scripts": {
