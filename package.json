@@ -1,8 +1,8 @@
 {
   "name": "hb-build",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "hb build",
-  "main": "index.js",
+  "main": "config.js",
   "scripts": {
     "dev": "webpack-dev-server --config ./webpack.config.dev.js",
     "_prod": "webpack --config ./webpack.config.prod.js",
@@ -28,6 +28,7 @@
   "dependencies": {
     "@babel/core": "7.5.4",
     "@babel/plugin-proposal-class-properties": "7.5.5",
+    "@babel/plugin-proposal-decorators": "7.8.3",
     "@babel/plugin-transform-runtime": "7.5.5",
     "@babel/preset-env": "7.5.4",
     "@babel/preset-react": "7.0.0",
@@ -72,6 +73,7 @@
   },
   "peerDependencies": {
     "babel-eslint": "10.0.2",
+    "core-js": "3.1.4",
     "eslint": "6.1.0",
     "eslint-config-airbnb": "18.0.0",
     "eslint-import-resolver-webpack": "0.11.1",

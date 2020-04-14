@@ -7,7 +7,7 @@ const StylelintWebpackPlugin = require('stylelint-webpack-plugin');
 
 const BASE_CONFIG = require('./webpack.config.base');
 
-const { DEV_HOST, DEV_PORT } = require('./config');
+const { DEV_HOST, DEV_PORT, CSS_MODULES } = require('./config');
 
 module.exports = merge(BASE_CONFIG, {
   mode: 'development',
@@ -43,6 +43,12 @@ module.exports = merge(BASE_CONFIG, {
           {
             loader: 'css-loader',
             options: {
+              modules: CSS_MODULES
+                ? {
+                    mode: CSS_MODULES,
+                    localIdentName: '[name]__[local]--[hash:base64:5]',
+                  }
+                : false,
               importLoaders: 1,
             },
           },

@@ -13,6 +13,7 @@ const {
   SOURCE_DIR = 'rsrc/src',
   TARGET_DIR = 'src/main/webapp',
   PUBLIC_PATH = `/${name.toLowerCase()}/rsrc/dist/`,
+  CSS_MODULES = false,
 } = pkg;
 
 module.exports = {
@@ -24,4 +25,5 @@ module.exports = {
   SOURCE_DIR,
   TARGET_DIR,
   PUBLIC_PATH,
+  CSS_MODULES,
 };

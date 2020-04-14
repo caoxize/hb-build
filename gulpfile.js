@@ -1,21 +1,22 @@
 const gulp = require('gulp');
-const { clean, copy, include, replace, rev } = require('./gulp.config.js');
+const {
+  clean,
+  copy,
+  include,
+  replace,
+  rev,
+} = require('hb-build/gulp.config.js');
 const path = require('path');
 // const config = require('@lattebank/build/config');
 // const gulpUpload = require('@lattebank/build/upload/gulp-upload');
 
-
 gulp.task('_clean', clean);
-
 
 gulp.task('_copy', copy);
 
-
 gulp.task('_include', include);
 
-
 gulp.task('_replace', replace);
-
 
 gulp.task('_rev', rev);
 
@@ -31,8 +32,9 @@ gulp.task('_rev', rev);
 //   }));
 // });
 
-
 gulp.task('default', function (done) {
-  console.log('[!]    前端开发规范-新手上路    http://cf.caijj.net:8090/pages/viewpage.action?pageId=1541776');
+  console.log(
+    '[!]    前端开发规范-新手上路    http://cf.caijj.net:8090/pages/viewpage.action?pageId=1541776'
+  );
   done();
 });

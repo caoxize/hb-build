@@ -7,7 +7,12 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const AssetsWebpackPlugin = require('assets-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const { PROJECT_PATH, TARGET_DIR, PUBLIC_PATH } = require('./config.js');
+const {
+  PROJECT_PATH,
+  TARGET_DIR,
+  PUBLIC_PATH,
+  CSS_MODULES,
+} = require('./config.js');
 
 const BASE_CONFIG = require('./webpack.config.base');
 
@@ -33,6 +38,12 @@ module.exports = merge(BASE_CONFIG, {
           {
             loader: 'css-loader',
             options: {
+              modules: CSS_MODULES
+                ? {
+                    mode: CSS_MODULES,
+                    localIdentName: '[name]__[local]--[hash:base64:5]',
+                  }
+                : false,
               importLoaders: 1,
             },
           },

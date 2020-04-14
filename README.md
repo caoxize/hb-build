@@ -13,3 +13,7 @@ hb打包，此包满足各种约定条件才可以使用，不用于一般使用
        - style.scss
 
 如果在package.json内指定entry，将引用自定义的entry
+
+## 0.0.4
+增加对CSS_MODULES的支持，
+在package.json配置：CSS_MODULES，支持local，global，不配置，默认关闭CSS_MODULES支持
