@@ -62,7 +62,7 @@ module.exports = merge(BASE_CONFIG, {
           {
             loader: 'url-loader',
             options: {
-              limit: 5120,
+              limit: 51200,
             },
           },
         ],
