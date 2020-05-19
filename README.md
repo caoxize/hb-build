@@ -2,6 +2,14 @@
 hb打包，此包满足各种约定条件才可以使用，不用于一般使用  
 请将gulpfile.js拷贝至根目录下
 
+## 0.0.9
+修改eslint版本，修复airbnb WARN
+修改.gitignore
+
+## 0.0.8
+修改生产webpack打包图片的默认限制值 - 10000B
+更新eslint规则
+
 ## 0.0.7
 修改webpack打包图片的默认限制值 - 10000B  
 添加@babel/polyfill

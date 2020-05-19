@@ -41,6 +41,5 @@ jscoverage_lib/
 bower_components/
 dist/
 
-.prettierrc
 package-lock.json
 webpack-assets.json
